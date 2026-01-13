@@ -5,7 +5,7 @@
             "keywords" : ["Godot", "HLSL", "Networking", "UDP", "RPC", "Music production"],
             "description" : "Ba'al's Basement is a game where one player is trapped in VR by a demon, and have to make poses with their hands to cast powerful spells, while the other player has to throw real-world balls to hurt the in-game demon that terrorizes the first player. We used hand tracking and image recognition to track the hands of the VR player and the balls flying at the screen, and built a fully networked experience from this.",
             "contributions" : "I managed the network solution, and did much of the system architecture. I did all the shader code for the project, implementing a retro PS1-style shader in VR. I also composed and produced the soundtrack for the game.",
-            "images" : [],
+            "images" : ["baal/vsdemon.jpg", "baal/vsdemon2.jpg"],
             "year" : 2025,
             "youtube" : "",
             "github" : "https://github.com/bAll-Focus/beelzebubs_basement",
