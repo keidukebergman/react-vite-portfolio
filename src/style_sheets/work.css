@@ -123,11 +123,22 @@
     backdrop-filter: blur(30px) brightness(10%) hue-rotate(100deg);
 }
 
-.work_entry{
+.work_entry_1{
+    padding: 5px;
     padding-bottom: 40px;
     color: #ebe8e2;
     font-size: var(--small_text_size);
+    background-color: #222;
 }
+
+.work_entry_0{
+    padding: 5px;
+    padding-bottom: 40px;
+    color: #ebe8e2;
+    font-size: var(--small_text_size);
+    background-color: #522;
+}
+
 #work h1{
     font-size: 40px; 
 }

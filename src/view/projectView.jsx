@@ -4,10 +4,14 @@ import { RiPagesLine } from "react-icons/ri";
 export function ProjectView(props) {
     
     const sortedProjects = [...props.projectData.projects].sort((a,b) => b.pride - a.pride);
+    const indexedProjects = sortedProjects.map((project, i) => ({
+        ...project,
+        index: i + 1
+    }));
     function DisplayProjectData({data})
     {
         return(
-            <div className="work_entry">
+            <div className={"work_entry_"+data.index%2}>
                 <h2>{data.title}</h2>
                 <div className="contents">
                     <div className="description_block">
@@ -82,7 +86,7 @@ export function ProjectView(props) {
                 <p>Coming from a solid Computer Science foundation, my specialities are graphics programming, game design and development of electronic interfaces. Here is an overview of some of my projects.</p>
             </div>
             <div className="work_container">
-                {sortedProjects.map((project)=>(<DisplayProjectData key={project.title} data={project}/>))}
+                {indexedProjects.map((project)=>(<DisplayProjectData key={project.title} data={project}/>))}
             </div>
         </div>     
     </section>

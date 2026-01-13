@@ -1,6 +1,7 @@
 {
     "projects" : [
         {
+            "index" : 0,
             "title" : "Ba'al's Basement",
             "keywords" : ["Godot", "HLSL", "Networking", "UDP", "RPC", "Music production"],
             "description" : "Ba'al's Basement is a game where one player is trapped in VR by a demon, and have to make poses with their hands to cast powerful spells, while the other player has to throw real-world balls to hurt the in-game demon that terrorizes the first player. We used hand tracking and image recognition to track the hands of the VR player and the balls flying at the screen, and built a fully networked experience from this.",
@@ -13,6 +14,7 @@
             "pride" : 10
         },
         {
+            "index" : 0,
             "title" : "Project Capsize",
             "keywords" : ["Unity3D", "C#", "Arduino", "Electrical Engineering", "Physical design"],
             "description" : "Project Capsize is a highly innovative VR sailing simulator in which you control a small sailing boat via a pulley and rudder, just like in real life! Thanks to the Omnidirectional Wind Helmet, you can feel the wind blowing on your face and adjust your sail to catch it. Brave realistic waves in a stylized environment. Control a physically modelled boat. Navigate a great lake and find its landmarks.",
@@ -25,6 +27,7 @@
             "pride" : 10
         },
         {
+            "index" : 0,
             "title" : "A space to W(o/a)nder",
             "keywords" : ["Arduino", "Electrical Engineering", "Physical design"],
             "description" : "A space to W(o/a)nder was a fully interactive display piece exhibited at Tekniska Museet. We made 5 light-emitting orbs with lenses that focused the light into water that then diffracted it in various patterns. The LED-lights on the orbs were controlled via an arduino and responded to being moved. Combined with an ambient soundtrack and a show by one of the group members, we made a display piece to remember.",
@@ -37,6 +40,7 @@
             "pride" : 8
         },
         {
+            "index" : 0,
             "title" : "TracQuiz",
             "keywords" : ["React", "Vite", "Web API", "Firebase", "Firestore", "AI integration in web application"],
             "description" : "TracQuiz is a web application built in React, with Gemini integration, Spotify integration and a backend in Firestore. It is a music quiz game, where the host generates a custom quiz based on a Spotify playlist of their choice, and the players try to answer the generated trivia questions on their own devices (similar to Kahoot).",
@@ -49,6 +53,7 @@
             "pride" : 9
         },
         {
+            "index" : 0,
             "title" : "This Portfolio",
             "keywords" : ["React", "Vite", "glsl"],
             "description" : "The very site you are on at the moment! Built in React from scratch in order to refresh my React skills.",
@@ -61,6 +66,7 @@
             "pride" : 9.5
         },
         {
+            "index" : 0,
             "title" : "AR cargo ship",
             "keywords" : ["Unity3D", "C#", "Vuforia", "XR"],
             "description" : "The AR Cargo Ship is a Unity application where the user commands a ship using their keyboard and real-world tokens. The tokens represent crew members, each with their own specialisations, that have to be moved around a physical game board to respond to different crises in-game. At the same time, the user has to steer the ship clear of obstacles using the arrow keys.",
