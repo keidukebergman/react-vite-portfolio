@@ -11,7 +11,7 @@ export function ProjectView(props) {
     function DisplayProjectData({data})
     {
         return(
-            <div className={"work_entry_"+data.index%2}>
+            <div className={"work_entry"}>
                 <h2>{data.title}</h2>
                 <div className="contents">
                     <div className="description_block">
@@ -30,14 +30,14 @@ export function ProjectView(props) {
                                 {data.github && (
                                     <div>
                                         <a href={data.github} target="_blank" rel="noopener noreferrer">
-                                            <FaGithub size={30} color="#FFF" />
+                                            <FaGithub size={50} color="#FFF" />
                                         </a>
                                     </div>
                                 )}
                                 {data.website && (
                                     <div>
                                         <a href={data.website} target="_blank" rel="noopener noreferrer">
-                                            <RiPagesLine size={30} color="#FFF" />
+                                            <RiPagesLine size={50} color="#FFF" />
                                         </a>
                                     </div>
                                 )}
@@ -49,7 +49,6 @@ export function ProjectView(props) {
                                 <iframe src={data.youtube}
                                 title="YouTube video player" 
                                 frameborder="0" 
-                                style={{width:'max(400px/1.5, 35vw/1.5)', height:'max(225px/1.5, 20vw/1.5)'}}
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                                 allowfullscreen>  
                                 </iframe>
