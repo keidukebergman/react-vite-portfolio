@@ -1,7 +1,5 @@
 
 #work {
-    position: relative;
-    z-index: 2;
     color : --white;
     padding-top: 40px;
     color: #ebe8e2;
@@ -105,6 +103,7 @@
         align-self: center;
     }
 }
+
 .work_container{
     border-top: 1px solid var(--off_head);
     padding-top: 30px;
