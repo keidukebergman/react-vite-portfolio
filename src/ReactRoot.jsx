@@ -4,6 +4,8 @@ import viteLogo from '/vite.svg'
 import './style_sheets/main.css'
 import './style_sheets/headers.css'
 import './style_sheets/work.css'
+import './style_sheets/about.css'
+import './style_sheets/contact.css'
 
 import { HeaderPresenter} from './presenter/headerPresenter'
 import { BackgroundShaderView } from './view/backgroundShaderView'
@@ -18,11 +20,11 @@ function ReactRoot(props) {
   return (
     <>
       <div className='header'>
-        <BackgroundShaderView className="animation"/>
+        <BackgroundShaderView/>
         <HeaderPresenter/> 
       </div>
       <ProjectPresenter projectData = {props.projectData}/>
-      <AboutPresenter/>
+      <AboutPresenter aboutme = {props.aboutme}/>
       <ContactPresenter/>
     </>
   )

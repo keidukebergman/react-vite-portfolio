@@ -70,7 +70,7 @@ export const BackgroundShaderView = ({ className }) => (
       position: "fixed",
       top: 0,
       left: 0,
-      zIndex: -100,
+      zIndex: 0,
       background: "black",
     }}
     camera={{ position: [0, 0, 1] }}

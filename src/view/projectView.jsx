@@ -11,7 +11,9 @@ export function ProjectView(props) {
     function DisplayProjectData({data})
     {
         return(
-            <div className={"work_entry"}>
+            <div className={"work_entry"}
+            style={data.index !== 1 ? { borderTop: "1px solid var(--off_head)" } : {}}
+            >
                 <h2>{data.title}</h2>
                 <div className="contents">
                     <div className="description_block">
@@ -26,22 +28,6 @@ export function ProjectView(props) {
                         <br/>
                         <p><strong>My contributions:</strong><br/><br/>{data.contributions}</p>
                         <br/>
-                        <div className='links'>
-                                {data.github && (
-                                    <div>
-                                        <a href={data.github} target="_blank" rel="noopener noreferrer">
-                                            <FaGithub size={50} color="#FFF" />
-                                        </a>
-                                    </div>
-                                )}
-                                {data.website && (
-                                    <div>
-                                        <a href={data.website} target="_blank" rel="noopener noreferrer">
-                                            <RiPagesLine size={50} color="#FFF" />
-                                        </a>
-                                    </div>
-                                )}
-                        </div>
                     </div>
                     <div className="media">
                         {data.youtube && (
@@ -70,6 +56,22 @@ export function ProjectView(props) {
                             </div>
                         )}
                     </div>
+                        <div className='links'>
+                                {data.github && (
+                                    <div>
+                                        <a href={data.github} target="_blank" rel="noopener noreferrer">
+                                            <FaGithub size={50} color="#FFF" />
+                                        </a>
+                                    </div>
+                                )}
+                                {data.website && (
+                                    <div>
+                                        <a href={data.website} target="_blank" rel="noopener noreferrer">
+                                            <RiPagesLine size={50} color="#FFF" />
+                                        </a>
+                                    </div>
+                                )}
+                        </div>
                 </div>
             </div>
         );
