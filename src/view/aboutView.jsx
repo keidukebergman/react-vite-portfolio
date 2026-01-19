@@ -1,3 +1,5 @@
+import { TbFileCv } from "react-icons/tb";
+import pdf from "../data/keidb_CV.pdf";
 export function AboutView(props) {
     return (
         <section id="about">
@@ -9,6 +11,11 @@ export function AboutView(props) {
                 </div>
                 <div className="about_container">
                     {props.aboutme}
+                    <div style={{marginTop:"15px"}}>
+                        <a href={pdf} target="_blank" rel="noopener noreferrer">
+                            <TbFileCv size={50} color="#FFF" />
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
