@@ -23,6 +23,11 @@ export function ContactView(props) {
                             </a>
                         </div>
                         <div>
+                            <a href={"mailto:brainthread@proton.me"} target="_blank" rel="noopener noreferrer">
+                                <IoMdMail size={50} color="#FFF" />
+                            </a>
+                        </div>
+                        <div>
                             <a href={"https://www.linkedin.com/in/kei-duke-bergman-37771b183"} target="_blank" rel="noopener noreferrer">
                                 <FaLinkedin size={50} color="#FFF" />
                             </a>
