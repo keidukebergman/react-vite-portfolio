@@ -10,7 +10,6 @@ export function HeaderView(props) {
                             <li><a href="#work">My Work</a></li>
                             <li><a href="#about">About</a></li>
                             <li><a href="#contact">Contact</a></li>
-                            <li><a href="#shaders">Some shaders</a></li>
                         </ul>
                     </nav>
                 </div>

@@ -4,6 +4,11 @@
     padding: 0;
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
+    
+}
+
+p {
+  white-space: pre-line;
 }
 
 :root {
@@ -21,4 +26,79 @@
     --large_text_size: 40px;
     --gargantuan_text_size: 50px;
     --chonk_text_size: 60px;
+}
+
+.carousel-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.carousel-track-wrap {
+  overflow: hidden;      /* ← this clips the off-screen slides */
+  width: 100%;
+  position: relative;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.3s ease;
+}
+
+.carousel-slide {
+  flex-shrink: 0;        /* ← this prevents slides from squishing */
+  width: 100%;
+}
+
+.carousel-track-wrap {
+  position: relative;  /* ← needed so buttons position relative to this */
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.carousel-btn.prev {
+  left: 8px;
+}
+
+.carousel-btn.next {
+  right: 8px;
+}
+
+.carousel-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #aaa;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.dot.active {
+  background: #333;
+}
+.carousel-counter {
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 4px;
 }

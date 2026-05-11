@@ -4,6 +4,8 @@ import viteLogo from '/vite.svg'
 import './style_sheets/main.css'
 import './style_sheets/headers.css'
 import './style_sheets/work.css'
+import './style_sheets/about.css'
+import './style_sheets/contact.css'
 
 import { HeaderPresenter} from './presenter/headerPresenter'
 import { BackgroundShaderView } from './view/backgroundShaderView'
@@ -14,7 +16,7 @@ import { ContactPresenter } from './presenter/contactPresenter'
 
 function ReactRoot(props) {
   const [count, setCount] = useState(0)
-
+  console.log(props.infoTabs)
   return (
     <>
       <div className='header'>
@@ -22,8 +24,8 @@ function ReactRoot(props) {
         <HeaderPresenter/> 
       </div>
       <ProjectPresenter projectData = {props.projectData}/>
-      <AboutPresenter/>
-      <ContactPresenter/>
+      <AboutPresenter info = {props.infoTabs.about_section}/>
+      <ContactPresenter info = {props.infoTabs.contact_section}/>
     </>
   )
 }

@@ -1,11 +1,33 @@
+import Carousel from "../utilities/carousel";
+import { TbFileCv } from "react-icons/tb";
+
 export function AboutView(props) {
+    function link_CV(link){
+        if (link == "")
+            return "";
+        else
+        {
+            return (
+                <a href={link} target="_blank" rel="noopener noreferrer">
+                    <TbFileCv size={40} color="#FFF" />
+                </a>
+            );
+        }
+    }
     return (
         <section id="about">
-            <div className="container">
-                <div>
-                    <h1>About me</h1>
-                    <p>Some text about me</p>
-                    
+            <div className='container'>
+                <div className='about_header'>
+                    <div className='about_title_container'>
+                        <div className='about_title'><h1>About Me</h1></div>
+                    </div>
+                        <p>I don't really know what to put here</p>
+                    <br/>
+                </div>
+                <div className="about_content">
+                    <Carousel images={["/img/projects/cargo/gameview.png", "/img/projects/cargo/gameview.png", "/img/projects/cargo/gameview.png"]}/>
+                    <p>{props.info.main_text}</p>
+                    <div className="cv_container">{link_CV("documents/cv.pdf")}</div>
                 </div>
             </div>
         </section>

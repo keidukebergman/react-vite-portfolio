@@ -1,5 +1,6 @@
 import { FaGithub } from 'react-icons/fa';
 import { RiPagesLine } from "react-icons/ri";
+import { FiGlobe } from "react-icons/fi";
 
 export function ProjectView(props) {
     
@@ -33,7 +34,7 @@ export function ProjectView(props) {
                                 {data.website && (
                                     <div>
                                         <a href={data.website} target="_blank" rel="noopener noreferrer">
-                                            <RiPagesLine size={30} color="#FFF" />
+                                            <FiGlobe size={30} color="#FFF" />
                                         </a>
                                     </div>
                                 )}
@@ -41,15 +42,13 @@ export function ProjectView(props) {
                     </div>
                     <div className="media">
                         {data.youtube && (
-                            <div className='video-container'>
                                 <iframe src={data.youtube}
                                 title="YouTube video player" 
                                 frameborder="0" 
-                                style={{width:'max(400px/1.5, 35vw/1.5)', height:'max(225px/1.5, 20vw/1.5)'}}
+                                style={{ width: '100%', aspectRatio: '16/9' }}
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                                 allowfullscreen>  
                                 </iframe>
-                            </div>
                         )}
                         {data.images &&
                         (
@@ -60,7 +59,7 @@ export function ProjectView(props) {
                                     key={index} 
                                     src={"img/projects/"+imagePath} 
                                     alt={`Image ${index}`} 
-                                    style={{ width: 'min(280px, 40vw)', margin: '10px' }} 
+                                    style={{ width: '100%', aspectRatio: '16/9' }}
                                     />
                                 </div>
                             ))}
@@ -76,7 +75,7 @@ export function ProjectView(props) {
         <div className="container">
             <div className='work_header'>
                 <div className='work_title_container'>
-                    <div className='work_title'><h1>My Work</h1></div>
+                    <div className='work_title'> <h1>My Work</h1> </div>
                 </div>
                 <br/>
                 <p>Coming from a solid Computer Science foundation, my specialities are graphics programming, game design and development of electronic interfaces. Here is an overview of some of my projects.</p>
