@@ -1,36 +1,44 @@
-import { FaGithub } from "react-icons/fa";
-import { IoMdMail } from "react-icons/io";
+import { FaGithub } from 'react-icons/fa';
+import { FiGlobe, FiFileText, FiMail } from "react-icons/fi";
 import { FaLinkedin } from "react-icons/fa";
-import { TbFileCv } from "react-icons/tb";
 
 export function ContactView(props) {
+    function create_icon(link, icon_type)
+    {
+        if (link != "")
+        {
+            const Icon = icon_type
+            return (
+                <div>
+                    <a href={link} target="_blank" rel="noopener noreferrer">
+                        <Icon size={40} color="#FFF" />
+                    </a>
+                </div>
+            )
+        }
+        return ""
+    }
     return (
         <section id="contact">
-            <div className="container">
-                <div className="contact_header">
-                    <div className="contact_title_container">
-                        <h1 className="contact_title">Contact</h1>
+            <div className='container'>
+                <div className='contact_header'>
+                    <div className='contact_title_container'>
+                        <div className='contact_title'><h1>Contact</h1></div>
                     </div>
-                </div>
-                <div className="contact_container">
-                    <p>Interested in what I can do?</p>
+                        <p>Ways to get in touch</p>
                     <br/>
-                    <p>Let's get in touch!</p>
-                    <div style={{display:"flex", marginTop:"10px", gap:"10px", justifyContent:"center"}}>
-                        <div>
-                            <a href={"https://github.com/Brainthread"} target="_blank" rel="noopener noreferrer">
-                                <FaGithub size={50} color="#FFF" />
-                            </a>
+                </div>
+                <div className="contact_content">
+                    <p>{props.info.main_text}</p>
+                    <div className="contact_icons">
+                        <div className="contact_element">
+                            {create_icon(props.info.email_link, FiMail)}
                         </div>
-                        <div>
-                            <a href={"mailto:brainthread@proton.me"} target="_blank" rel="noopener noreferrer">
-                                <IoMdMail size={50} color="#FFF" />
-                            </a>
+                        <div className="contact_element">
+                            {create_icon(props.info.linkedin_link, FaLinkedin)}
                         </div>
-                        <div>
-                            <a href={"https://www.linkedin.com/in/kei-duke-bergman-37771b183"} target="_blank" rel="noopener noreferrer">
-                                <FaLinkedin size={50} color="#FFF" />
-                            </a>
+                        <div className="contact_element">
+                            {create_icon(props.info.github_link, FaGithub)}
                         </div>
                     </div>
                 </div>

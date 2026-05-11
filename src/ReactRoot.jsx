@@ -16,16 +16,16 @@ import { ContactPresenter } from './presenter/contactPresenter'
 
 function ReactRoot(props) {
   const [count, setCount] = useState(0)
-
+  console.log(props.infoTabs)
   return (
     <>
       <div className='header'>
-        <BackgroundShaderView/>
+        <BackgroundShaderView className="animation"/>
         <HeaderPresenter/> 
       </div>
       <ProjectPresenter projectData = {props.projectData}/>
-      <AboutPresenter aboutme = {props.aboutme}/>
-      <ContactPresenter/>
+      <AboutPresenter info = {props.infoTabs.about_section}/>
+      <ContactPresenter info = {props.infoTabs.contact_section}/>
     </>
   )
 }

@@ -1,22 +1,67 @@
+@media (min-width:1080px){
+    .work_entry .contents .media{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .work_entry .contents{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5%;
+    }
+    .work_entry .contents .description_block{
+        width: 45%;
+    }
+    .work_entry .contents .media{
+        margin-left: 5%;
+        width: 45%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: flex-start;
+    }
+}
+
+@media (max-width: 1079px) {
+    .work_entry .contents .description_block{
+    width: 100%;
+    }
+    .work_entry .contents{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5%;
+    }
+    .work_entry .contents .media{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: flex-start;
+    }
+}
+
 
 #work {
+    position: relative;
+    z-index: 2;
     color : --white;
     padding-top: 40px;
     color: #ebe8e2;
     font-size: var(--small_text_size);
     pointer-events: none;
-    display: flex;
-    flex-direction: column;
-    z-index: 1;
 }
 
 #work .container{
-    align-self: center;
     border-top: 1px solid var(--off_head);
     width: 80%;
+    margin-left: 10%;
     padding-bottom: 0;
     color : --white;
     pointer-events: all;
+    border-bottom: 1px solid var(--off_head);
 }
 
 .work_header{
@@ -32,7 +77,7 @@
 }
 
 .work_header p{
-    width: 80%;
+    width: min(100%, 800px);
     margin-bottom: 20px;
 }
 
@@ -45,95 +90,29 @@
     margin-top: 10px;
 }
 
-.links{
-    width: 100%;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    align-self: center;
-    display: flex;
-    justify-content: left;
-}
 
-@media (min-width:1080px){
-    #work {
-        text-align: left;
-    }
-    .work_entry .contents{
-        display: flex;
-        flex-wrap: wrap;
-        gap: 9%;
-    }
-    .work_entry .contents .media{
-        width: max(38%, 400px);
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    .work_entry .contents .description_block{
-        width: 38%;
-        display: flex;
-        flex-direction: column;
-        justify-content: left;
-    }
-}
-
-@media (max-width: 1079px) {
-    #work {
-        text-align: center;
-    }
-    .work_entry .contents .description_block{
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-    }
-    .work_entry .contents{
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        justify-content: center;
-    }
-    .work_entry .contents .media{
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-    }
-
-    .video-container {
-        width: 100%;
-        max-width: none;
-    }
-
-    .video-container iframe {
-        width: 100%;
-        height: auto;
-        aspect-ratio: 16 / 9;
-    }
-    .links{
-        justify-content: center;
-    }
-}
-
-
-
-.work_container{
+.work_container {
     border-top: 1px solid var(--off_head);
+    padding-top: 30px;
     padding-left: 4%;
     padding-right: 4%;
-    backdrop-filter: blur(30px) brightness(10%) hue-rotate(100deg);
+    backdrop-filter: blur(30px) brightness(15%) hue-rotate(90deg);
+    position: relative;
 }
+
 
 .work_entry{
-    padding-top: 20px;
-    padding-bottom: 10px;
-    padding-left: 1%;
-    padding-right: 1%;
+    padding-bottom: 40px;
     color: #ebe8e2;
     font-size: var(--small_text_size);
+    border-bottom: 1px solid var(--off_head);
+    margin-bottom: 15px;
 }
 
+.work_entry:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
 
 #work h1{
     font-size: 40px; 
@@ -145,15 +124,23 @@
     padding-bottom: 15px;
 }
 
+.work_entry .contents{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5%;
+}
+
 .work_entry .contents .links{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .work_entry .contents .links div{
     margin-right: 10px;
     margin-left: 0px;
 }
+
 
 .work_entry .contents .media .image_container{
     display: flex;

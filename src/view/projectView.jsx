@@ -1,19 +1,14 @@
 import { FaGithub } from 'react-icons/fa';
 import { RiPagesLine } from "react-icons/ri";
+import { FiGlobe } from "react-icons/fi";
 
 export function ProjectView(props) {
     
     const sortedProjects = [...props.projectData.projects].sort((a,b) => b.pride - a.pride);
-    const indexedProjects = sortedProjects.map((project, i) => ({
-        ...project,
-        index: i + 1
-    }));
     function DisplayProjectData({data})
     {
         return(
-            <div className={"work_entry"}
-            style={data.index !== 1 ? { borderTop: "1px solid var(--off_head)" } : {}}
-            >
+            <div className="work_entry">
                 <h2>{data.title}</h2>
                 <div className="contents">
                     <div className="description_block">
@@ -28,17 +23,32 @@ export function ProjectView(props) {
                         <br/>
                         <p><strong>My contributions:</strong><br/><br/>{data.contributions}</p>
                         <br/>
+                        <div className='links'>
+                                {data.github && (
+                                    <div>
+                                        <a href={data.github} target="_blank" rel="noopener noreferrer">
+                                            <FaGithub size={30} color="#FFF" />
+                                        </a>
+                                    </div>
+                                )}
+                                {data.website && (
+                                    <div>
+                                        <a href={data.website} target="_blank" rel="noopener noreferrer">
+                                            <FiGlobe size={30} color="#FFF" />
+                                        </a>
+                                    </div>
+                                )}
+                        </div>
                     </div>
                     <div className="media">
                         {data.youtube && (
-                            <div className='video-container'>
                                 <iframe src={data.youtube}
                                 title="YouTube video player" 
                                 frameborder="0" 
+                                style={{ width: '100%', aspectRatio: '16/9' }}
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                                 allowfullscreen>  
                                 </iframe>
-                            </div>
                         )}
                         {data.images &&
                         (
@@ -49,29 +59,13 @@ export function ProjectView(props) {
                                     key={index} 
                                     src={"img/projects/"+imagePath} 
                                     alt={`Image ${index}`} 
-                                    style={{ width: 'min(280px, 40vw)', margin: '10px' }} 
+                                    style={{ width: '100%', aspectRatio: '16/9' }}
                                     />
                                 </div>
                             ))}
                             </div>
                         )}
                     </div>
-                        <div className='links'>
-                                {data.github && (
-                                    <div>
-                                        <a href={data.github} target="_blank" rel="noopener noreferrer">
-                                            <FaGithub size={50} color="#FFF" />
-                                        </a>
-                                    </div>
-                                )}
-                                {data.website && (
-                                    <div>
-                                        <a href={data.website} target="_blank" rel="noopener noreferrer">
-                                            <RiPagesLine size={50} color="#FFF" />
-                                        </a>
-                                    </div>
-                                )}
-                        </div>
                 </div>
             </div>
         );
@@ -81,13 +75,13 @@ export function ProjectView(props) {
         <div className="container">
             <div className='work_header'>
                 <div className='work_title_container'>
-                    <div className='work_title'><h1>My Work</h1></div>
+                    <div className='work_title'> <h1>My Work</h1> </div>
                 </div>
                 <br/>
                 <p>Coming from a solid Computer Science foundation, my specialities are graphics programming, game design and development of electronic interfaces. Here is an overview of some of my projects.</p>
             </div>
             <div className="work_container">
-                {indexedProjects.map((project)=>(<DisplayProjectData key={project.title} data={project}/>))}
+                {sortedProjects.map((project)=>(<DisplayProjectData key={project.title} data={project}/>))}
             </div>
         </div>     
     </section>

@@ -1,21 +1,33 @@
+import Carousel from "../utilities/carousel";
 import { TbFileCv } from "react-icons/tb";
-import pdf from "../data/keidb_CV.pdf";
+
 export function AboutView(props) {
+    function link_CV(link){
+        if (link == "")
+            return "";
+        else
+        {
+            return (
+                <a href={link} target="_blank" rel="noopener noreferrer">
+                    <TbFileCv size={40} color="#FFF" />
+                </a>
+            );
+        }
+    }
     return (
         <section id="about">
-            <div className="container">
-                <div className="about_header">
-                    <div className="about_title_container">
-                        <h1 className="about_title">About me</h1>
+            <div className='container'>
+                <div className='about_header'>
+                    <div className='about_title_container'>
+                        <div className='about_title'><h1>About Me</h1></div>
                     </div>
+                        <p>I don't really know what to put here</p>
+                    <br/>
                 </div>
-                <div className="about_container">
-                    {props.aboutme}
-                    <div style={{marginTop:"15px"}}>
-                        <a href={pdf} target="_blank" rel="noopener noreferrer">
-                            <TbFileCv size={50} color="#FFF" />
-                        </a>
-                    </div>
+                <div className="about_content">
+                    <Carousel images={["/img/projects/cargo/gameview.png", "/img/projects/cargo/gameview.png", "/img/projects/cargo/gameview.png"]}/>
+                    <p>{props.info.main_text}</p>
+                    <div className="cv_container">{link_CV("documents/cv.pdf")}</div>
                 </div>
             </div>
         </section>
