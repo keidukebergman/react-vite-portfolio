@@ -2,6 +2,9 @@ import Carousel from "../utilities/carousel";
 import { TbFileCv } from "react-icons/tb";
 
 export function AboutView(props) {
+    function format_images(images){
+        return images.map(element => import.meta.env.BASE_URL + "/img/about/" + element);
+    }
     function link_CV(link){
         if (link == "")
             return "";
@@ -25,7 +28,7 @@ export function AboutView(props) {
                     <br/>
                 </div>
                 <div className="about_content">
-                    <Carousel images={[import.meta.env.BASE_URL + "/img/projects/cargo/gameview.png", import.meta.env.BASE_URL + "/img/projects/cargo/gameview.png", import.meta.env.BASE_URL + "/img/projects/cargo/gameview.png"]}/>
+                    <Carousel images={format_images(props.info.images)}/>
                     <p>{props.info.main_text}</p>
                     <div className="cv_container">{link_CV("documents/cv.pdf")}</div>
                 </div>

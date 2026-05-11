@@ -8,7 +8,8 @@
             {
                 "header_text" : "A programmer, writer and tech nerd from central Stockholm.",
                 "main_text" : "TBA",
-                "cv_link" : "hex"
+                "cv_link" : "hex",
+                "images" : ["kei_inspirational_photo.png", "KeiLogo.jpg", "KeiLogo1.png"]
             },
             "contact_section" :
             {
