@@ -7,12 +7,12 @@
             "about_section" :
             {
                 "header_text" : "A programmer, writer and tech nerd from central Stockholm.",
-                "main_text" : "Hi, I’m Kei Duke-Bergman.\n\n I am a developer and computer scientist currently shaping the future of digital experiences at KTH Royal Institute of Technology. My work lives at the intersection of high-performance graphics and intuitive interaction design. Whether I’m winning Game Jams with atmospheric prototypes or developing complex software solutions, my goal is to build tools and worlds that feel as good as they function. With a background rooted in both the technical world of Stockholm's tech scene and the narrative-rich heritage of my family’s literary work, I approach every line of code as a piece of a larger story. Key Expertise: Graphics Programming: Crafting visual systems that push the boundaries of immersion. \nInteraction Design: Designing user-centric interfaces that feel natural and fluid. Game Development: Rapid prototyping and full-cycle development for award-winning projects.",
+                "main_text" : "TBA",
                 "cv_link" : "hex"
             },
             "contact_section" :
             {
-                "header_text" : "Ways to get in touch.",
+                "header_text" : "Ways to get in touch",
                 "main_text" : "",
                 "linkedin_link" : "https://www.linkedin.com/in/kei-duke-bergman-37771b183/",
                 "email_link" : "mailto:keidb@kth.se",
