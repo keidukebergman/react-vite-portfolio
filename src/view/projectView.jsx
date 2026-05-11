@@ -57,7 +57,7 @@ export function ProjectView(props) {
                                 <div className="image_inner_container">
                                     <img 
                                     key={index} 
-                                    src={"img/projects/"+imagePath} 
+                                    src={import.meta.env.BASE_URL+"/img/projects/"+imagePath} 
                                     alt={`Image ${index}`} 
                                     style={{ width: '100%', aspectRatio: '16/9' }}
                                     />

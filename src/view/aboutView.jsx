@@ -25,7 +25,7 @@ export function AboutView(props) {
                     <br/>
                 </div>
                 <div className="about_content">
-                    <Carousel images={["/img/projects/cargo/gameview.png", "/img/projects/cargo/gameview.png", "/img/projects/cargo/gameview.png"]}/>
+                    <Carousel images={[import.meta.env.BASE_URL + "/img/projects/cargo/gameview.png", import.meta.env.BASE_URL + "/img/projects/cargo/gameview.png", import.meta.env.BASE_URL + "/img/projects/cargo/gameview.png"]}/>
                     <p>{props.info.main_text}</p>
                     <div className="cv_container">{link_CV("documents/cv.pdf")}</div>
                 </div>
