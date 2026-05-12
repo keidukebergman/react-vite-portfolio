@@ -35,7 +35,7 @@ p {
 }
 
 .carousel-track-wrap {
-  overflow: hidden;      /* ← this clips the off-screen slides */
+  overflow: hidden;    
   width: 100%;
   position: relative;
 }
@@ -46,12 +46,12 @@ p {
 }
 
 .carousel-slide {
-  flex-shrink: 0;        /* ← this prevents slides from squishing */
+  flex-shrink: 0;      
   width: 100%;
 }
 
 .carousel-track-wrap {
-  position: relative;  /* ← needed so buttons position relative to this */
+  position: relative; 
 }
 
 .carousel-btn {

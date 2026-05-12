@@ -6,10 +6,10 @@
             },
             "about_section" :
             {
-                "header_text" : "A programmer, writer and tech nerd from central Stockholm.",
-                "main_text" : "Hello! \n \n This portion is not complete yet, but you are very welcome here when it is!",
+                "header_text" : "A programmer, writer and musician from central Stockholm.",
+                "main_text" : "Hello! \n \n The name is Kei. If you have looked around on this site or my LinkedIn, you already know that I am a huge tech enthusiast. I like to tinker with everything from hardware to software, and I take pride in making things that shouldn't be technically feasible possible. I am also a literature nerd and aspiring writer, and engage in the occasional music production. In my spare time, I read, paint, develop games and dance lindy hop. \n\n If you have any proposition, business or otherwise, that involves these topics, don't hesitate to reach out over my socials, linked below!",
                 "cv_link" : "hex",
-                "images" : ["kei_inspirational_photo.png", "KeiLogo.jpg", "KeiLogo1.png"]
+                "images" : ["about_0.png", "about_1.jpg", "about_2.jpg"]
             },
             "contact_section" :
             {
