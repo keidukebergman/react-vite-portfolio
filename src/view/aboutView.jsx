@@ -24,7 +24,7 @@ export function AboutView(props) {
                     <div className='about_title_container'>
                         <div className='about_title'><h1>About Me</h1></div>
                     </div>
-                        <p>I don't really know what to put here</p>
+                        <p>{props.info.header_text}</p>
                     <br/>
                 </div>
                 <div className="about_content">

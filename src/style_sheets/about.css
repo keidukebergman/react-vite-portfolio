@@ -1,3 +1,19 @@
+@media (min-width:1080px){
+    #about .container {
+        width: 40%;
+        margin-left: 30%;
+    }
+}
+
+@media (max-width: 1079px) {
+    #about .container{
+        width: 100%;
+        margin-left: 0%;
+    }
+}
+
+
+
 #about {
     position: relative;
     z-index: 2;
@@ -8,8 +24,6 @@
 }
 #about .container {
     border-top: 1px solid var(--off_head);
-    width: 40%;
-    margin-left: 30%;
     padding-bottom: 0;
     pointer-events: all;
     border-bottom: 1px solid var(--off_head);
