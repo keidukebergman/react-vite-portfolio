@@ -1,9 +1,14 @@
 import { FaGithub } from 'react-icons/fa';
 import { RiPagesLine } from "react-icons/ri";
 import { FiGlobe } from "react-icons/fi";
+import Carousel from '../utilities/carousel';
 
 export function ProjectView(props) {
     
+    function CreateCarouselData (carousel_data)
+    {
+        return carousel_data.map(element => import.meta.env.BASE_URL + "/img/projects/" + element);
+    }
     const sortedProjects = [...props.projectData.projects].sort((a,b) => b.pride - a.pride);
     function DisplayProjectData({data})
     {
@@ -63,6 +68,11 @@ export function ProjectView(props) {
                                     />
                                 </div>
                             ))}
+                            </div>
+                        )}
+                        {data.carousel && data.carousel.length != 0 && (
+                            <div>
+                                <Carousel images={CreateCarouselData(data.carousel)}/>
                             </div>
                         )}
                     </div>
